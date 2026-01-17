@@ -1,0 +1,112 @@
+:root {
+    --bg-color: #0D0D0D;
+    --surface-color: #1A1A1A;
+    --text-color: #FFFFFF;
+    --accent-color: #00FF85;
+    --gap-md: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar & Menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(13, 13, 13, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo span { color: var(--accent-color); font-weight: bold; }
+
+.nav-links { display: none; } /* Mobile First */
+
+@media (min-width: 768px) {
+    .nav-links { display: flex; gap: var(--gap-md); }
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: var(--surface-color);
+    transition: 0.4s ease;
+    z-index: 200;
+    padding: 2rem;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+}
+
+.sidebar.active { right: 0; }
+
+/* Hero Showcase */
+.hero-showcase {
+    height: 60vh;
+    background: var(--surface-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 30px;
+    left: 5%;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+/* Horizontal Scroll Rows */
+.horizontal-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 5%;
+    scrollbar-width: none; /* Firefox */
+}
+
+.video-card {
+    min-width: 160px;
+    height: 240px;
+    background: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.video-card:hover { transform: scale(1.05); border: 1px solid var(--accent-color); }
+
+/* Genre Grid */
+.genre-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 5%;
+}
+
+.genre-btn {
+    background: var(--surface-color);
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.genre-btn:hover { background: var(--accent-color); color: black; }

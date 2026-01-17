@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperCast</title>
+    
+    <!--style-->
+    <link rel="stylesheet" href="/style/rootcss.css">
+    
+    <!--script-->
+     <script src="/script/main.js" defer></script>
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">STREAM<span>NEON</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Series</a>
+        </div>
+        <button class="menu-btn" id="menuBtn">☰</button>
+    </nav>
+
+    <aside class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">×</button>
+        <ul>
+            <li><a href="#">Account Access</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="hero-showcase" id="heroShowcase">
+            <div class="hero-slide active">
+                <div class="hero-content">
+                    <h1 class="hero-title">Loading Highlight...</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="row">
+            <h3>Last Released</h3>
+            <div class="horizontal-scroll" id="lastReleased"></div>
+        </section>
+
+        <section class="row">
+            <h3>Suggestions For You</h3>
+            <div class="horizontal-scroll" id="suggestions"></div>
+        </section>
+
+        <section class="genres">
+            <h3>Explore Genres</h3>
+            <div class="genre-grid" id="genreGrid">
+                <button class="genre-btn">Action</button>
+                <button class="genre-btn">Anime</button>
+                <button class="genre-btn">Sci-Fi</button>
+                <button class="genre-btn">Horror</button>
+                <button class="genre-btn">Comedy</button>
+                <button class="genre-btn">Drama</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
